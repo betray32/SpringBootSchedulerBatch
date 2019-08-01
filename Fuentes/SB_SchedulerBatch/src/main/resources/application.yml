@@ -1,0 +1,5 @@
+# YML Spring Batch - QUARTZ
+VersionBatch : 1.0.0
+
+Procedures:
+  ObtieneMaestro: FISA_CREDITOS.PKG_PARAM_SPRINGBATCH.USP_PARAM_OBTENER_TODO
