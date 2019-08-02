@@ -25,6 +25,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 		, "cl.poc.scheduler.dao"
 		, "cl.poc.scheduler.properties"
 		, "cl.poc.scheduler.task"
+		, "cl.poc.scheduler.batch"
 	}
 )
 public class SbSchedulerBatchApplication {

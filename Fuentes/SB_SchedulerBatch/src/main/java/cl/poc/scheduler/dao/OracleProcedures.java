@@ -10,6 +10,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import cl.poc.scheduler.bean.ParametricaBean;
 import cl.poc.scheduler.properties.CustomYMLFile;
 
 /**

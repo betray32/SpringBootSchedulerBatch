@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import cl.poc.scheduler.bean.ParametricaBean;
 import cl.poc.scheduler.dao.OracleProcedures;
-import cl.poc.scheduler.dao.ParametricaBean;
 
 /**
  * Permite inicializar el agendamiento desde la base de datos, se cargan los datos desde un SP

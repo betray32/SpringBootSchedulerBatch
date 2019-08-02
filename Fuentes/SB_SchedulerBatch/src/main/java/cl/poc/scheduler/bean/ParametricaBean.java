@@ -1,4 +1,4 @@
-package cl.poc.scheduler.dao;
+package cl.poc.scheduler.bean;
 
 /**
  * Bean de la tabla del sp

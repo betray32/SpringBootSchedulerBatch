@@ -15,6 +15,10 @@ public class CustomYMLFile {
 
 	private String VersionBatch;
 	private int THREAD_POOL_SIZE;
+	
+	/**
+	 * Procedimientos
+	 */
 	private Procedures Procedures;
 
 	/**
