@@ -46,8 +46,10 @@ public class OracleProcedures {
 	 * @param registro
 	 * @return
 	 */
-	public int obtenerTiempoReinvocacion() {
+	public ParametricaBean obtenerParametros() {
 
+		
+		ParametricaBean res = null;
 		try {
 
 			String procedure = properties.getProcedures().getObtieneMaestro();
@@ -61,29 +63,28 @@ public class OracleProcedures {
 					 * Salidas
 					 */
 					.registerStoredProcedureParameter(1, Integer.class, ParameterMode.OUT)
-					.registerStoredProcedureParameter(2, String.class, ParameterMode.OUT)
-					.registerStoredProcedureParameter(3, String.class, ParameterMode.OUT)
-					.registerStoredProcedureParameter(4, Integer.class, ParameterMode.OUT);
+					.registerStoredProcedureParameter(2, Long.class, ParameterMode.OUT)
+					.registerStoredProcedureParameter(3, Long.class, ParameterMode.OUT)
+					.registerStoredProcedureParameter(4, String.class, ParameterMode.OUT);
 
 			log.info("Ejecutando SP");
 			query.execute();
 			log.info("Procedimiento ejecutado OK");
 
-			int codigoSalida = (Integer) query.getOutputParameterValue(1);
-
-			if (codigoSalida == 0) {
-				int minutosIntervalo = (Integer) query.getOutputParameterValue(4);
-				return minutosIntervalo;
-			} else {
-				log.error("Ha ocurrido un error al obtener los parametros desde BD");
-			}
+			res = new ParametricaBean();
+			res.setEnabled((Integer) query.getOutputParameterValue(1));
+			res.setFixedRate((Long) query.getOutputParameterValue(2));
+			res.setFixedDelay((Long) query.getOutputParameterValue(3));
+			res.setEstado((String) query.getOutputParameterValue(4));
+	
+			return res;
 
 		} catch (Exception e) {
 			log.error("Error en la ejecucion, ERROR > ", e);
 		}
 
-		return -1;
+		return res;
 
 	}
-	
+
 }
