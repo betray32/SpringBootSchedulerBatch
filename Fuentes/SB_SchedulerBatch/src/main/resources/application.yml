@@ -1,0 +1,6 @@
+# YML Spring - Scheduling
+VersionBatch : 1.0.0
+THREAD_POOL_SIZE : 1
+
+Procedures:
+  ObtieneMaestro: FISA_CREDITOS.PKG_PARAM_SPRINGBATCH.USP_PARAM_NOTIFICACIONES
