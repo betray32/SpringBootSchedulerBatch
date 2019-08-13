@@ -78,7 +78,7 @@ public class JobNotificaciones {
 		
 
 		return stepBuilderFactory.get("stepNotification")
-				.<ListadoMaestroNotificaciones, ListadoMaestroNotificaciones>chunk(10)
+				.<ListadoMaestroNotificaciones, ListadoMaestroNotificaciones>chunk(50)
 				.reader(step.readerNotification())
 				.processor(step.processorNotification())
 				.writer(step.writerNotification())

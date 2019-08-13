@@ -11,6 +11,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
+/**
+ * Agendador
+ * 
+ * @author ccontrerasc
+ *
+ */
 @Component
 public class ScheduledTasks {
 
@@ -20,10 +26,10 @@ public class ScheduledTasks {
 	private static final Logger log = LoggerFactory.getLogger(ScheduledTasks.class);
 
 	@Autowired
-	JobLauncher jobLauncher;
+	private JobLauncher jobLauncher;
 
 	@Value("#{executeBatchProcessing}")
-	Job job;
+	private Job job;
 
 	@Value("#{obtenerParams.enabled}")
 	private int enabled;
@@ -39,7 +45,7 @@ public class ScheduledTasks {
 		 */
 		if (enabled == 1) {
 
-			log.info("[INFO] Ejecutando Automaticamente... ");
+			log.info("[INFO] Ejecutando Automaticamente Tarea... ");
 			
 			/**************************************
 			 * Inicio automatico del JOB BATCH

@@ -14,7 +14,7 @@ import cl.poc.scheduler.bean.ParametricaBean;
 import cl.poc.scheduler.properties.CustomYMLFile;
 
 /**
- * Permite pagar en fisa
+ * Funciones Oracle
  * 
  * @author ccontrerasc
  *

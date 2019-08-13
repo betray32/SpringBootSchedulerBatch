@@ -16,7 +16,7 @@ import cl.poc.scheduler.properties.CustomYMLFile;
 import oracle.jdbc.OracleTypes;
 
 /**
- * Read data from oracle stored procedure - fisa
+ * Leer data desde procedimiento almacenado oracle
  * 
  * @author ccontrerasc
  *
